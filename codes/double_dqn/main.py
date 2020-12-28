@@ -83,13 +83,13 @@ def train():
     import numpy as np
     save_path = os.path.dirname(__file__)+"/saved_model/"
     if not os.path.exists(save_path):
-        os.mkdir(save_path)
+        os.makedirs(save_path)
     agent.save_model(save_path+'checkpoint.pth')
     # 存储reward等相关结果
     output_path = os.path.dirname(__file__)+"/result/"
     # 检测是否存在文件夹
     if not os.path.exists(output_path):
-        os.mkdir(output_path)
+        os.makedirs(output_path)
     np.save(output_path+"rewards.npy", rewards)
     np.save(output_path+"moving_average_rewards.npy", moving_average_rewards)
     np.save(output_path+"steps.npy", ep_steps)
@@ -110,7 +110,7 @@ def eval():
     import os
     save_path = os.path.dirname(__file__)+"/saved_model/"
     if not os.path.exists(save_path):
-        os.mkdir(save_path)
+        os.makedirs(save_path)
     agent.load_model(save_path+'checkpoint.pth')
     rewards = []
     moving_average_rewards = []
@@ -126,7 +126,7 @@ def eval():
             if done:
                 break
         print('Episode:', i_episode, ' Reward: %i' %
-              int(ep_reward), 'n_steps:', i_step, 'done: ', done,' Explore: %.2f' % agent.epsilon)
+              int(ep_reward), 'end at n_steps:', i_step,' Explore: %.2f' % agent.epsilon)   # TODO 看下log，全都是0.01 消减地好厉害  # TODO 存进tensorboard去看...会不会导致events.out文件太大了...
         ep_steps.append(i_step)
         rewards.append(ep_reward)
         # 计算滑动窗口的reward

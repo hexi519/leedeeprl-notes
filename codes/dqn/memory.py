@@ -27,7 +27,7 @@ class ReplayBuffer:
     
     def sample(self, batch_size):
         batch = random.sample(self.buffer, batch_size)
-        state, action, reward, next_state, done =  zip(*batch)
+        state, action, reward, next_state, done =  zip(*batch)  #* 这用法真不错2333 # TODO check一下 tuple 解开之后zip，会得到什么效果...
         return state, action, reward, next_state, done
     
     def __len__(self):

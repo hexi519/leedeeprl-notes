@@ -113,7 +113,7 @@ def test(cfg):
     env = CliffWalkingWapper(env)
     agent = QLearning(
         obs_dim=env.observation_space.n,
-        action_dim=env.action_space.n,
+        action_dim=env.action_spa   ce.n,
         learning_rate=cfg.policy_lr,
         gamma=cfg.gamma,
         epsilon_start=cfg.epsilon_start,epsilon_end=cfg.epsilon_end,epsilon_decay=cfg.epsilon_decay)

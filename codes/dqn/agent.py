@@ -38,28 +38,28 @@ class DQN:
         self.target_net = FCN(n_states, n_actions).to(self.device)
         # target_net的初始模型参数完全复制policy_net
         self.target_net.load_state_dict(self.policy_net.state_dict())
-        self.target_net.eval()  # 不启用 BatchNormalization 和 Dropout
+        self.target_net.eval()  # 不启用 BatchNormalization 和 Dropout  # TODO BN的原理 以及 是否过气了
         # 可查parameters()与state_dict()的区别，前者require_grad=True
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=policy_lr)
         self.loss = 0
         self.memory = ReplayBuffer(memory_capacity)
-
+    
     def choose_action(self, state, train=True):
         '''选择动作
         '''
         if train:
             self.epsilon = self.epsilon_end + (self.epsilon_start - self.epsilon_end) * \
-                math.exp(-1. * self.actions_count / self.epsilon_decay)
+                math.exp(-1. * self.actions_count / self.epsilon_decay) # TODO 这个decay有什么讲究么 看下别人的代码
             self.actions_count += 1
             if random.random() > self.epsilon:
-                with torch.no_grad():
+                with torch.no_grad():   # TODO 这部分不会被track梯度 why？ 比如说那个更新的式子，反向传播到底如何实做？
                     # 先转为张量便于丢给神经网络,state元素数据原本为float64
-                    # 注意state=torch.tensor(state).unsqueeze(0)跟state=torch.tensor([state])等价
+                    # 注意state=torch.tensor(state).unsqueeze(0)跟state=torch.tensor([state])等价 # TODO 所以为何要unsqueeze呢 😂
                     state = torch.tensor(
                         [state], device=self.device, dtype=torch.float32)
                     # 如tensor([[-0.0798, -0.0079]], grad_fn=<AddmmBackward>)
                     q_value = self.policy_net(state)
-                    # tensor.max(1)返回每行的最大值以及对应的下标，
+                    # tensor.max(1)返回每行的最大值以及对应的下标，   # TODO 这里想说的是返回的下标和数值都是tensor形式的，所以下面要用item()
                     # 如torch.return_types.max(values=tensor([10.3587]),indices=tensor([0]))
                     # 所以tensor.max(1)[1]返回最大值对应的下标，即action
                     action = q_value.max(1)[1].item()  
@@ -71,7 +71,7 @@ class DQN:
                     # 先转为张量便于丢给神经网络,state元素数据原本为float64
                     # 注意state=torch.tensor(state).unsqueeze(0)跟state=torch.tensor([state])等价
                     state = torch.tensor(
-                        [state], device='cpu', dtype=torch.float32)
+                        [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32)    # TODO eval一般都用CPU？
                     # 如tensor([[-0.0798, -0.0079]], grad_fn=<AddmmBackward>)
                     q_value = self.target_net(state)
                     # tensor.max(1)返回每行的最大值以及对应的下标，
@@ -79,13 +79,13 @@ class DQN:
                     # 所以tensor.max(1)[1]返回最大值对应的下标，即action
                     action = q_value.max(1)[1].item() 
             return action
+    
     def update(self):
-
         if len(self.memory) < self.batch_size:
             return
         # 从memory中随机采样transition
         state_batch, action_batch, reward_batch, next_state_batch, done_batch = self.memory.sample(
-            self.batch_size)
+            self.batch_size) 
         # 转为张量
         # 例如tensor([[-4.5543e-02, -2.3910e-01,  1.8344e-02,  2.3158e-01],...,[-1.8615e-02, -2.3921e-01, -1.1791e-02,  2.3400e-01]])
         state_batch = torch.tensor(
@@ -97,12 +97,12 @@ class DQN:
         next_state_batch = torch.tensor(
             next_state_batch, device=self.device, dtype=torch.float)
         done_batch = torch.tensor(np.float32(
-            done_batch), device=self.device).unsqueeze(1)  # 将bool转为float然后转为张量
+            done_batch), device=self.device).unsqueeze(1)  # 将bool转为float然后转为张量    # TODO 为何就action和done需要用unsqueeze? 为何要变成二维的？如果直接用dtype不可以转换格式么
 
         # 计算当前(s_t,a)对应的Q(s_t, a)
         # 关于torch.gather,对于a=torch.Tensor([[1,2],[3,4]])
         # 那么a.gather(1,torch.Tensor([[0],[1]]))=torch.Tensor([[1],[3]])
-        q_values = self.policy_net(state_batch).gather(
+        q_values = self.policy_net(state_batch).gather( # TODO 为什么这里不直接记录Qvalue？ 还是说大家都是这样（看下别的repository）还是说为了接口统一(看下别的算法)--》 别的算法是的，比如说DDQN，就解耦了action的选择和评估。 别的repository情况就不知道了。
             dim=1, index=action_batch)  # 等价于self.forward
         # 计算所有next states的V(s_{t+1})，即通过target_net中选取reward最大的对应states
         next_state_values = self.target_net(
@@ -118,11 +118,11 @@ class DQN:
         # loss.backward()使用backpropagation计算loss相对于所有parameters(需要gradients)的微分
         self.loss.backward()
         for param in self.policy_net.parameters():  # clip防止梯度爆炸
-            param.grad.data.clamp_(-1, 1)
+            param.grad.data.clamp_(-1, 1)   # TODO 这个梯度大小是如何来定的？观察以后调整？   
         self.optimizer.step()  # 更新模型
 
-    def save_model(self,path):
+    def save_target_model(self,path):
         torch.save(self.target_net.state_dict(), path)
 
-    def load_model(self,path):
+    def load_target_model(self,path):
         self.target_net.load_state_dict(torch.load(path))  

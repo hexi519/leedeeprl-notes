@@ -1,0 +1,1155 @@
+/home/hesy/.conda/envs/py36/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/hesy/.conda/envs/py36/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/hesy/.conda/envs/py36/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/hesy/.conda/envs/py36/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/hesy/.conda/envs/py36/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/hesy/.conda/envs/py36/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.396299 line        72                 with torch.no_grad():
+13:16:39.397064 line        75                         state = torch.tensor(
+13:16:39.397163 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.397336 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.401354 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.006085
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.402471 line        72                 with torch.no_grad():
+13:16:39.402657 line        75                         state = torch.tensor(
+13:16:39.402772 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.402960 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.403670 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001881
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.404438 line        72                 with torch.no_grad():
+13:16:39.404584 line        75                         state = torch.tensor(
+13:16:39.404674 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.404822 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.405486 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001721
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.406246 line        72                 with torch.no_grad():
+13:16:39.406382 line        75                         state = torch.tensor(
+13:16:39.406471 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.406621 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.407290 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001714
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.408047 line        72                 with torch.no_grad():
+13:16:39.408184 line        75                         state = torch.tensor(
+13:16:39.408271 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.408418 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.409110 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001732
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.409867 line        72                 with torch.no_grad():
+13:16:39.410003 line        75                         state = torch.tensor(
+13:16:39.410091 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.410239 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.410903 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001706
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.411660 line        72                 with torch.no_grad():
+13:16:39.411796 line        75                         state = torch.tensor(
+13:16:39.411884 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.412068 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.412745 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001755
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.413501 line        72                 with torch.no_grad():
+13:16:39.413642 line        75                         state = torch.tensor(
+13:16:39.413730 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.413879 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.414545 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001716
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.415304 line        72                 with torch.no_grad():
+13:16:39.415443 line        75                         state = torch.tensor(
+13:16:39.415532 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.415680 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.416369 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001770
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.418766 line        72                 with torch.no_grad():
+13:16:39.418919 line        75                         state = torch.tensor(
+13:16:39.419010 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.419171 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.420108 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.002044
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.420911 line        72                 with torch.no_grad():
+13:16:39.421050 line        75                         state = torch.tensor(
+13:16:39.421140 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.421291 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.421953 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001711
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.422708 line        72                 with torch.no_grad():
+13:16:39.422844 line        75                         state = torch.tensor(
+13:16:39.422932 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.423082 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.423738 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001695
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.424499 line        72                 with torch.no_grad():
+13:16:39.424637 line        75                         state = torch.tensor(
+13:16:39.424727 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.424877 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.425531 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001698
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.426283 line        72                 with torch.no_grad():
+13:16:39.426421 line        75                         state = torch.tensor(
+13:16:39.426510 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.426659 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.427313 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001694
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.428063 line        72                 with torch.no_grad():
+13:16:39.428204 line        75                         state = torch.tensor(
+13:16:39.428296 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.428453 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.429114 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001719
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.429868 line        72                 with torch.no_grad():
+13:16:39.430040 line        75                         state = torch.tensor(
+13:16:39.430136 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.430287 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.430947 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001744
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.431700 line        72                 with torch.no_grad():
+13:16:39.431836 line        75                         state = torch.tensor(
+13:16:39.431923 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.432070 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.432737 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001706
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.433746 line        72                 with torch.no_grad():
+13:16:39.433898 line        75                         state = torch.tensor(
+13:16:39.433991 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.434149 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.435288 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.002225
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.436063 line        72                 with torch.no_grad():
+13:16:39.436204 line        75                         state = torch.tensor(
+13:16:39.436295 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.436464 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.437129 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001731
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.437881 line        72                 with torch.no_grad():
+13:16:39.438020 line        75                         state = torch.tensor(
+13:16:39.438112 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.438264 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.438929 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001718
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.439686 line        72                 with torch.no_grad():
+13:16:39.439833 line        75                         state = torch.tensor(
+13:16:39.439924 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.440076 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.440751 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001735
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.441510 line        72                 with torch.no_grad():
+13:16:39.441648 line        75                         state = torch.tensor(
+13:16:39.441737 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.441888 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.442549 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001705
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.443301 line        72                 with torch.no_grad():
+13:16:39.443440 line        75                         state = torch.tensor(
+13:16:39.443529 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.443678 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.444361 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001740
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.445127 line        72                 with torch.no_grad():
+13:16:39.445270 line        75                         state = torch.tensor(
+13:16:39.445361 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.445510 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.446169 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001720
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.446938 line        72                 with torch.no_grad():
+13:16:39.447116 line        75                         state = torch.tensor(
+13:16:39.447210 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.447360 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.448023 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001764
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.448788 line        72                 with torch.no_grad():
+13:16:39.448926 line        75                         state = torch.tensor(
+13:16:39.449014 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.449167 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.449826 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001702
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.450577 line        72                 with torch.no_grad():
+13:16:39.450737 line        75                         state = torch.tensor(
+13:16:39.450833 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.450984 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.451658 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001751
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.452670 line        72                 with torch.no_grad():
+13:16:39.452815 line        75                         state = torch.tensor(
+13:16:39.452906 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.453065 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.454419 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.002435
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.455196 line        72                 with torch.no_grad():
+13:16:39.455337 line        75                         state = torch.tensor(
+13:16:39.455429 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.455581 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.456249 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001753
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.457036 line        72                 with torch.no_grad():
+13:16:39.457178 line        75                         state = torch.tensor(
+13:16:39.457270 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.457421 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.458080 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001713
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.458835 line        72                 with torch.no_grad():
+13:16:39.458971 line        75                         state = torch.tensor(
+13:16:39.459060 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.459210 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.459870 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001712
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.460633 line        72                 with torch.no_grad():
+13:16:39.460771 line        75                         state = torch.tensor(
+13:16:39.460860 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.461008 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.461663 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001686
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.462405 line        72                 with torch.no_grad():
+13:16:39.462542 line        75                         state = torch.tensor(
+13:16:39.462632 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.462781 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.463584 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001854
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.464345 line        72                 with torch.no_grad():
+13:16:39.464489 line        75                         state = torch.tensor(
+13:16:39.464580 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.464730 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.465392 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001716
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.466147 line        72                 with torch.no_grad():
+13:16:39.466283 line        75                         state = torch.tensor(
+13:16:39.466371 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.466521 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.467204 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001762
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.467997 line        72                 with torch.no_grad():
+13:16:39.468133 line        75                         state = torch.tensor(
+13:16:39.468222 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.468373 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.469047 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001723
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.469807 line        72                 with torch.no_grad():
+13:16:39.469943 line        75                         state = torch.tensor(
+13:16:39.470032 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.470184 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.470844 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001703
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.471827 line        72                 with torch.no_grad():
+13:16:39.471971 line        75                         state = torch.tensor(
+13:16:39.472061 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.472218 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.473472 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.002326
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.474246 line        72                 with torch.no_grad():
+13:16:39.474386 line        75                         state = torch.tensor(
+13:16:39.474478 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.474629 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.475292 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001714
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.476046 line        72                 with torch.no_grad():
+13:16:39.476184 line        75                         state = torch.tensor(
+13:16:39.476275 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.476429 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.477114 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001737
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.477870 line        72                 with torch.no_grad():
+13:16:39.478006 line        75                         state = torch.tensor(
+13:16:39.478095 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.478246 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.478907 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001699
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.479657 line        72                 with torch.no_grad():
+13:16:39.479794 line        75                         state = torch.tensor(
+13:16:39.479906 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.480070 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.487992 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.009097
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.488843 line        72                 with torch.no_grad():
+13:16:39.488982 line        75                         state = torch.tensor(
+13:16:39.489071 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.489223 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.489890 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001643
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.490560 line        72                 with torch.no_grad():
+13:16:39.490677 line        75                         state = torch.tensor(
+13:16:39.490754 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.490886 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.491466 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001493
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.492128 line        72                 with torch.no_grad():
+13:16:39.492247 line        75                         state = torch.tensor(
+13:16:39.492324 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.492465 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.493046 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001509
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.493712 line        72                 with torch.no_grad():
+13:16:39.493830 line        75                         state = torch.tensor(
+13:16:39.493907 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.494037 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.494619 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001495
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.495283 line        72                 with torch.no_grad():
+13:16:39.495402 line        75                         state = torch.tensor(
+13:16:39.495479 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.495611 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.496189 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001509
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.497074 line        72                 with torch.no_grad():
+13:16:39.497199 line        75                         state = torch.tensor(
+13:16:39.497277 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.497416 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.498549 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.002074
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.499229 line        72                 with torch.no_grad():
+13:16:39.499351 line        75                         state = torch.tensor(
+13:16:39.499430 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.499563 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.500144 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001524
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.500827 line        72                 with torch.no_grad():
+13:16:39.500962 line        75                         state = torch.tensor(
+13:16:39.501038 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.501167 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.501739 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001485
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.502385 line        72                 with torch.no_grad():
+13:16:39.502525 line        75                         state = torch.tensor(
+13:16:39.502607 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.502739 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.503315 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001513
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.503971 line        72                 with torch.no_grad():
+13:16:39.504089 line        75                         state = torch.tensor(
+13:16:39.504171 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.504301 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.504891 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001489
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.505532 line        72                 with torch.no_grad():
+13:16:39.505645 line        75                         state = torch.tensor(
+13:16:39.505739 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.505870 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.506449 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001505
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.507108 line        72                 with torch.no_grad():
+13:16:39.507221 line        75                         state = torch.tensor(
+13:16:39.507295 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.507422 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.507979 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001444
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.508624 line        72                 with torch.no_grad():
+13:16:39.508737 line        75                         state = torch.tensor(
+13:16:39.508811 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.508937 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.509492 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001432
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.510128 line        72                 with torch.no_grad():
+13:16:39.510240 line        75                         state = torch.tensor(
+13:16:39.510313 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.510455 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.511048 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001476
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.511675 line        72                 with torch.no_grad():
+13:16:39.511788 line        75                         state = torch.tensor(
+13:16:39.511861 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.511986 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.512559 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001459
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.513398 line        72                 with torch.no_grad():
+13:16:39.513519 line        75                         state = torch.tensor(
+13:16:39.513594 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.513726 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.514788 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.002001
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.515477 line        72                 with torch.no_grad():
+13:16:39.515598 line        75                         state = torch.tensor(
+13:16:39.515675 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.515806 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.516372 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001553
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.517103 line        72                 with torch.no_grad():
+13:16:39.517227 line        75                         state = torch.tensor(
+13:16:39.517303 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.517432 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.517994 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001487
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.518663 line        72                 with torch.no_grad():
+13:16:39.518780 line        75                         state = torch.tensor(
+13:16:39.518855 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.518983 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.519549 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001462
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.520198 line        72                 with torch.no_grad():
+13:16:39.520312 line        75                         state = torch.tensor(
+13:16:39.520386 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.520538 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.521142 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001519
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.521789 line        72                 with torch.no_grad():
+13:16:39.521901 line        75                         state = torch.tensor(
+13:16:39.521975 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.522099 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.522643 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001411
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.523273 line        72                 with torch.no_grad():
+13:16:39.523384 line        75                         state = torch.tensor(
+13:16:39.523456 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.523580 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.524123 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001435
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.524795 line        72                 with torch.no_grad():
+13:16:39.524907 line        75                         state = torch.tensor(
+13:16:39.524980 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.525103 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.525650 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001416
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.526287 line        72                 with torch.no_grad():
+13:16:39.526397 line        75                         state = torch.tensor(
+13:16:39.526469 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.526592 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.527136 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001398
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.527946 line        72                 with torch.no_grad():
+13:16:39.528066 line        75                         state = torch.tensor(
+13:16:39.528142 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.528271 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.529372 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001991
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.530012 line        72                 with torch.no_grad():
+13:16:39.530128 line        75                         state = torch.tensor(
+13:16:39.530202 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.530362 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.530921 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001483
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.531569 line        72                 with torch.no_grad():
+13:16:39.531686 line        75                         state = torch.tensor(
+13:16:39.531761 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.531889 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.532475 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001478
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.533117 line        72                 with torch.no_grad():
+13:16:39.533228 line        75                         state = torch.tensor(
+13:16:39.533299 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.533420 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.533970 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001436
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.534628 line        72                 with torch.no_grad():
+13:16:39.534739 line        75                         state = torch.tensor(
+13:16:39.534810 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.534932 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.535464 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001378
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.536076 line        72                 with torch.no_grad():
+13:16:39.536187 line        75                         state = torch.tensor(
+13:16:39.536260 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.536381 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.536968 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001440
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.537586 line        72                 with torch.no_grad():
+13:16:39.537702 line        75                         state = torch.tensor(
+13:16:39.537776 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.537898 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.538429 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001385
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.539042 line        72                 with torch.no_grad():
+13:16:39.539154 line        75                         state = torch.tensor(
+13:16:39.539226 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.539348 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.539924 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001452
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.540567 line        72                 with torch.no_grad():
+13:16:39.540687 line        75                         state = torch.tensor(
+13:16:39.540764 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.540903 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.541438 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001426
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.542062 line        72                 with torch.no_grad():
+13:16:39.542181 line        75                         state = torch.tensor(
+13:16:39.542256 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.542381 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.542916 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001462
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.543595 line        72                 with torch.no_grad():
+13:16:39.543729 line        75                         state = torch.tensor(
+13:16:39.543809 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.543935 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.544486 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001445
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.545549 line        72                 with torch.no_grad():
+13:16:39.545680 line        75                         state = torch.tensor(
+13:16:39.545754 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.545885 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.546572 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001598
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.547219 line        72                 with torch.no_grad():
+13:16:39.547332 line        75                         state = torch.tensor(
+13:16:39.547406 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.547530 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.548096 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001449
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.548739 line        72                 with torch.no_grad():
+13:16:39.548854 line        75                         state = torch.tensor(
+13:16:39.548928 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.549051 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.549592 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001402
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.550218 line        72                 with torch.no_grad():
+13:16:39.550330 line        75                         state = torch.tensor(
+13:16:39.550402 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.550524 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.551063 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001392
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.551680 line        72                 with torch.no_grad():
+13:16:39.551793 line        75                         state = torch.tensor(
+13:16:39.551867 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.551989 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.552540 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001411
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.553164 line        72                 with torch.no_grad():
+13:16:39.553277 line        75                         state = torch.tensor(
+13:16:39.553350 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.553471 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.554137 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001527
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.554761 line        72                 with torch.no_grad():
+13:16:39.554874 line        75                         state = torch.tensor(
+13:16:39.554947 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.555070 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.555609 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001388
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.556219 line        72                 with torch.no_grad():
+13:16:39.556329 line        75                         state = torch.tensor(
+13:16:39.556401 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.556536 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.557077 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001401
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.557690 line        72                 with torch.no_grad():
+13:16:39.557823 line        75                         state = torch.tensor(
+13:16:39.557897 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.558021 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.558559 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001441
+Source path:... /home/hesy/rlreview/leedeeprl-notes/codes/dqn/agent.py
+New var:....... self = <agent.DQN object at 0x7fd1928aa4e0>
+New var:....... state = ndarray<(4,), float64>
+New var:....... train = False
+New var:....... tsn = <module 'torchsnooper' from '/home/hesy/.conda/e...ython3.6/site-packages/torchsnooper/__init__.py'>
+13:16:39.559201 line        72                 with torch.no_grad():
+13:16:39.559311 line        75                         state = torch.tensor(
+13:16:39.559383 line        76                             [state], device="cuda" if torch.cuda.is_available() else "cpu", dtype=torch.float32) 
+Modified var:.. state = tensor<(1, 4), float32, cuda:0>
+13:16:39.559506 line        78                         q_value = self.target_net(state)
+New var:....... q_value = tensor<(1, 2), float32, cuda:0>
+13:16:39.560047 line        82                         action = q_value.max(1)[1].item() 
+Elapsed time: 00:00:00.001389
+****** start to eval ! ****** 
+
+Episode: 1  Reward: 9 n_steps: 9 done:  True
+Episode: 2  Reward: 8 n_steps: 8 done:  True
+Episode: 3  Reward: 10 n_steps: 10 done:  True
+Episode: 4  Reward: 10 n_steps: 10 done:  True
+Episode: 5  Reward: 10 n_steps: 10 done:  True
+Episode: 6  Reward: 10 n_steps: 10 done:  True
+Episode: 7  Reward: 9 n_steps: 9 done:  True
+Episode: 8  Reward: 11 n_steps: 11 done:  True
+Episode: 9  Reward: 10 n_steps: 10 done:  True
+***** Complete evaling！***** 

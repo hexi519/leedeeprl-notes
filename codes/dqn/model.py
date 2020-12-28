@@ -19,6 +19,7 @@ class FCN(nn.Module):
             n_actions: 输出的action总个数
         """
         super(FCN, self).__init__()
+        # hesy : 这里采用的模式是 输入s, 输出(s,a)的组合。我觉得默认就是这种，否则我们要跑好几个pass的神经网络(因为要把好多个(s,a)的组合都输入进去)
         self.fc1 = nn.Linear(n_states, 128) # 输入层
         self.fc2 = nn.Linear(128, 128) # 隐藏层
         self.fc3 = nn.Linear(128, n_actions) # 输出层
