@@ -5,7 +5,7 @@ Author: John
 Email: johnjim0816@gmail.com
 Date: 2020-09-11 23:03:00
 LastEditor: John
-LastEditTime: 2020-10-07 21:05:33
+LastEditTime: 2020-11-24 19:56:23
 Discription: 
 Environment: 
 '''
@@ -26,13 +26,14 @@ Environment:
 # -*- coding: utf-8 -*-
 
 import gym
-from gridworld import CliffWalkingWapper, FrozenLakeWapper
+from env import CliffWalkingWapper, FrozenLakeWapper
 from agent import QLearning
 import os
 import numpy as np
 import argparse
 import time
 import matplotlib.pyplot as plt
+<<<<<<< HEAD
 
 def get_args():
     '''训练的模型参数
@@ -50,12 +51,18 @@ def get_args():
     config = parser.parse_args()
 
     return config
+=======
+from env import env_init_1
+from params import get_args
+from params import SEQUENCE, SAVED_MODEL_PATH, RESULT_PATH
+from utils import save_results,save_model
+from plot import plot
+>>>>>>> dw/master
 
 def train(cfg):
-    # env = gym.make("FrozenLake-v0", is_slippery=False)  # 0 left, 1 down, 2 right, 3 up
-    # env = FrozenLakeWapper(env)
-    env = gym.make("CliffWalking-v0")  # 0 up, 1 right, 2 down, 3 left
-    env = CliffWalkingWapper(env)
+    '''# env = gym.make("FrozenLake-v0", is_slippery=False)  # 0 left, 1 down, 2 right, 3 up
+    # env = FrozenLakeWapper(env)'''
+    env = env_init_1()
     agent = QLearning(
         obs_dim=env.observation_space.n,
         action_dim=env.action_space.n,
@@ -85,7 +92,7 @@ def train(cfg):
                 break
         steps.append(ep_steps)
         rewards.append(ep_reward)
-        # 计算滑动平均的reward
+        '''计算滑动平均的reward'''
         if i_episode == 1:
             MA_rewards.append(ep_reward)
         else:
@@ -93,20 +100,17 @@ def train(cfg):
                 0.9*MA_rewards[-1]+0.1*ep_reward) 
         print('Episode %s: steps = %s , reward = %.1f, explore = %.2f' % (i_episode, ep_steps,
                                                           ep_reward,agent.epsilon))                                 
-        # 每隔20个episode渲染一下看看效果
+        '''每隔20个episode渲染一下看看效果'''
         if i_episode % 20 == 0:
             render = True
         else:
             render = False
-    agent.save() # 训练结束，保存模型
-
-    output_path = os.path.dirname(__file__)+"/result/"
-    # 检测是否存在文件夹
-    if not os.path.exists(output_path):
-        os.mkdir(output_path)
-    np.save(output_path+"rewards_train.npy", rewards)
-    np.save(output_path+"MA_rewards_train.npy", MA_rewards)
-    np.save(output_path+"steps_train.npy", steps)
+    print('Complete training！')
+    save_model(agent,model_path=SAVED_MODEL_PATH)
+    '''存储reward等相关结果'''
+    save_results(rewards,MA_rewards,tag='train',result_path=RESULT_PATH)
+    plot(rewards)
+    plot(MA_rewards,ylabel='moving_average_rewards_train')
 
 def test(cfg):
     env = gym.make("CliffWalking-v0")  # 0 up, 1 right, 2 down, 3 left
@@ -144,6 +148,7 @@ def test(cfg):
             MA_rewards.append(
                 0.9*MA_rewards[-1]+0.1*ep_reward) 
         print('Episode %s: steps = %s , reward = %.1f' % (i_episode, ep_steps, ep_reward))
+<<<<<<< HEAD
     plt.plot(MA_rewards,cfg,"test_MArewards")
     plt.show()   
 
@@ -157,6 +162,15 @@ def plotRes(cfg):
     plot(MA_rewards,cfg,ylabel='moving_average_rewards')
     plot(steps,cfg,ylabel='steps')
 
+=======
+    print('Complete training！')
+    save_model(agent,model_path=SAVED_MODEL_PATH)
+    '''存储reward等相关结果'''
+    save_results(rewards,MA_rewards,tag='train',result_path=RESULT_PATH)
+    plot(rewards)
+    plot(MA_rewards,ylabel='moving_average_rewards_train')
+      
+>>>>>>> dw/master
 def main():
     cfg = get_args()
     train(cfg)
@@ -164,4 +178,10 @@ def main():
     # test(cfg)
 
 if __name__ == "__main__":
-    main()
+    cfg = get_args()
+    if cfg.train:
+        train(cfg)
+        eval(cfg)
+    else:
+        model_path = os.path.split(os.path.abspath(__file__))[0]+"/saved_model/"
+        eval(cfg,saved_model_path=model_path)
